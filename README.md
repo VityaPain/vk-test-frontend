@@ -1,5 +1,4 @@
 # Тестовое задание ВК
-***
 ## Инструкция запуска
 1) Клонируем репозиторий `git clone https://github.com/VityaPain/vk-test-frontend.git`
 2) Устанавливаем зависимости `npm i`
