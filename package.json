@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@hookform/resolvers": "^3.3.4",
+    "@tanstack/react-query": "^5.28.0",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -10,17 +12,26 @@
     "@types/node": "^16.18.89",
     "@types/react": "^18.2.65",
     "@types/react-dom": "^18.2.22",
+    "@vkontakte/vk-bridge": "^2.14.1",
+    "@vkontakte/vk-miniapps-deploy": "^0.1.6",
+    "@vkontakte/vkui": "^6.0.1",
+    "node-sass": "^7.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-hook-form": "^7.51.0",
+    "react-query": "^3.39.3",
     "react-scripts": "5.0.1",
     "typescript": "^4.9.5",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "yup": "^1.4.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "cross-env PORT=3000 HTTPS=true react-scripts start",
+    "tunnel": "vk-tunnel --insecure=1 --http-protocol=https --ws-protocol=wss --host=192.168.X.X --port=3000",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "vk-miniapps-deploy"
   },
   "eslintConfig": {
     "extends": [
@@ -39,5 +50,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "cross-env": "^7.0.3"
   }
 }
